@@ -1,0 +1,75 @@
+# Clash Verge / Mihomo 示例：将本仓库规则作为 rule-providers 使用
+# 用法：把以下片段合并进你自己的主配置，确保策略组名称存在。
+#
+# 说明：
+# - 推荐使用 .yaml + format: yaml（本仓库已生成）
+# - 如果你坚持用 .list，请改成对应 .list 文件，并把 format 改为 text
+
+rule-providers:
+  openai:
+    type: file
+    behavior: classical
+    path: ./Ai/OpenAI.yaml
+    format: yaml
+    interval: 86400
+
+  claude:
+    type: file
+    behavior: classical
+    path: ./Ai/Claude.yaml
+    format: yaml
+    interval: 86400
+
+  gemini:
+    type: file
+    behavior: classical
+    path: ./Ai/Gemini.yaml
+    format: yaml
+    interval: 86400
+
+  cursor:
+    type: file
+    behavior: classical
+    path: ./Ai/CurSor.yaml
+    format: yaml
+    interval: 86400
+
+  copilot:
+    type: file
+    behavior: classical
+    path: ./Ai/Copilot.yaml
+    format: yaml
+    interval: 86400
+
+  grok:
+    type: file
+    behavior: classical
+    path: ./Ai/Grok.yaml
+    format: yaml
+    interval: 86400
+
+  metaai:
+    type: file
+    behavior: classical
+    path: ./Ai/MetaAi.yaml
+    format: yaml
+    interval: 86400
+
+  check:
+    type: file
+    behavior: classical
+    path: ./Check.yaml
+    format: yaml
+    interval: 86400
+
+# 注意：下面策略组名称（如 AI、Proxy、DIRECT）需要和你的主配置保持一致。
+rules:
+  - RULE-SET,openai,AI
+  - RULE-SET,claude,AI
+  - RULE-SET,gemini,AI
+  - RULE-SET,cursor,AI
+  - RULE-SET,copilot,AI
+  - RULE-SET,grok,AI
+  - RULE-SET,metaai,AI
+  - RULE-SET,check,Proxy
+  - MATCH,DIRECT

@@ -1,0 +1,8 @@
+payload:
+  - DOMAIN,auth.meta.com
+  - DOMAIN,l.facebook.com
+  - DOMAIN-SUFFIX,meta.ai
+  - DOMAIN-SUFFIX,metademolab.com
+  - DOMAIN-SUFFIX,llama.com
+  - DOMAIN-SUFFIX,llama.meta.com
+  - DOMAIN-SUFFIX,meta.com
