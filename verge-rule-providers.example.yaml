@@ -2,8 +2,7 @@
 # 用法：把以下片段合并进你自己的主配置，确保策略组名称存在。
 #
 # 说明：
-# - 推荐使用 .yaml + format: yaml（本仓库已生成）
-# - 如果你坚持用 .list，请改成对应 .list 文件，并把 format 改为 text
+# - 本仓库仅维护 .yaml 规则集，统一使用 format: yaml
 
 rule-providers:
   openai:
